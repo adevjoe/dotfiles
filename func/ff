@@ -1,0 +1,27 @@
+#!/bin/bash
+# find str from files
+# usage: ff key [filename...]
+# author: zhouwei
+# source from: https://github.com/lfckop/utils/blob/master/ff
+
+if (($# < 1)) ; then
+    echo "Usage: ff key [filename...]"
+    echo "Example: ff uid"
+    echo "Example: ff uid \"*.log\""
+    echo "Example: ff uid a.log b.log"
+    exit 1
+fi
+
+key="$1"
+shift
+
+if [[ "$@" == "" ]]; then
+    find . -type f -exec grep --color=auto -H -n "$key" {} \;
+else
+    for file in "$@"
+    do
+        find . -type f -name "$file" -exec grep --color=auto -H -n "$key" {} \;
+    done
+fi
+
+exit 0

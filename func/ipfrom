@@ -1,0 +1,17 @@
+#!/bin/bash
+# check where is the $ip from
+# usage: ipfrom $ip
+# author: zhouwei
+# source from: https://github.com/lfckop/utils/blob/master/ipfrom
+
+if (($#<1)); then
+    echo "Usage: ipfrom ip"
+    exit 1
+fi
+
+for ip in $@
+do
+    curl "http://ip.cn/index.php?ip=${ip}"
+done
+
+exit 0
