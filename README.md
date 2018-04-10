@@ -6,9 +6,9 @@
 
 ```
 cd $HOME && git clone git@github.com:adevjoe/shell-tool.git .st
+echo 'source $HOME/.st/.source' >> $HOME/.zshrc
 ```
-
-把 `source $HOME/.st/.source` 添加到 `.zshrc` or `.bashrc` or ... 等配置文件里面。
+使用其他 shell 的可以把 zshrc 换成其他的。
 
 ## Usage
 
