@@ -23,6 +23,11 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+# NDK
+export PATH=$PATH:$HOME/Android/ndk
+export ANDROID_NDK=$HOME/Android/ndk
+export ANDROID_HOME=$HOME/Android/Sdk
+
 # Editor
 export VISUAL="vim"
 
