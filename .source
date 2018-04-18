@@ -39,3 +39,6 @@ export PATH=$PATH:$HOME/.nvm/versions/node/v9.10.1/bin:/usr/local/node/bin
 
 # gem
 export PATH=$PATH:$HOME/.gem/ruby/2.5.0/bin
+
+# autojump
+[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
