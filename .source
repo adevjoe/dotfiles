@@ -14,11 +14,13 @@ alias vi=vim
 alias ll="ls -alF"
 alias dc=docker-compose
 alias proxy="export http_proxy='http://127.0.0.1:8123' export https_proxy='http://127.0.0.1:8123'"
+alias p=proxychains
 alias pg="ps aux | head -1; ps aux | grep -v grep | grep"
 alias myip="curl -s http://whatismyip.akamai.com/"
 
 # ENV
 # Golang
+export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
@@ -37,7 +39,10 @@ export VISUAL="vim"
 export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH=$PATH:$HOME/.nvm/versions/node/v9.10.1/bin
+export PATH=$PATH:$HOME/.nvm/versions/node/v9.10.1/bin:/usr/local/node/bin
 
 # gem
 export PATH=$PATH:$HOME/.gem/ruby/2.5.0/bin
+
+# autojump
+[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
