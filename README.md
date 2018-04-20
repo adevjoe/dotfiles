@@ -6,9 +6,9 @@
 
 ```
 cd $HOME && git clone git@github.com:adevjoe/shell-tool.git .st
-echo 'source $HOME/.st/.source' >> $HOME/.zshrc
+sudo sh -c "echo 'source $HOME/.st/.source' >> /etc/profile"
 ```
-使用其他 shell 的可以把 zshrc 换成其他的。
+注销重新登录即可。
 
 ## Usage
 
