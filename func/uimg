@@ -7,7 +7,7 @@
 #   - xclip 系统自带包管理安装
 
 # 获取图片路径
-IMG_PATH=.cache/screenshot.jpg
+IMG_PATH=$HOME/.cache/screenshot.jpg
 IMG_NAME=$(date '+%s')$(cat /dev/urandom | head -n 10 | md5sum | head -c 10).jpg
 
 # 上传
