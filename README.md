@@ -6,9 +6,8 @@
 
 ```
 cd $HOME && git clone git@github.com:adevjoe/shell-tool.git .st
-sudo sh -c "echo 'source $HOME/.st/.source' >> /etc/profile"
-```
-注销重新登录即可。
+echo 'source $HOME/.st/.source' >> $HOME/.zshrc
+``
 
 ## Usage
 
