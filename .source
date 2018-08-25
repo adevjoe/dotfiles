@@ -11,7 +11,7 @@ export PATH=$PATH:${ST_PATH}:${ST_PATH}/func
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vi=vim
-alias ll="ls -alF"
+alias ll="ls -alFh"
 alias dc=docker-compose
 alias proxy="export http_proxy='http://127.0.0.1:8123' export https_proxy='http://127.0.0.1:8123'"
 alias pg="ps aux | head -1; ps aux | grep -v grep | grep"
