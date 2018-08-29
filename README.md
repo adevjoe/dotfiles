@@ -7,7 +7,7 @@
 ```
 cd $HOME && git clone git@github.com:adevjoe/shell-tool.git .st
 echo 'source $HOME/.st/.source' >> $HOME/.zshrc
-``
+```
 
 ## Usage
 
