@@ -14,6 +14,7 @@ alias vi=vim
 alias ll="ls -alFh"
 alias dc=docker-compose
 alias proxy="export http_proxy='http://127.0.0.1:8123' export https_proxy='http://127.0.0.1:8123'"
+alias disproxy='unset http_proxy https_proxy'
 alias pg="ps aux | head -1; ps aux | grep -v grep | grep"
 alias myip="curl -s http://whatismyip.akamai.com/"
 alias avd=$ANDROID_HOME"/tools/emulator -avd"
