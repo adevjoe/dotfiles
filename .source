@@ -31,7 +31,9 @@ export ANDROID_NDK=$HOME/Android/Ndk
 export PATH=$PATH:$ANDROID_NDK
 
 # Android
-export ANDROID_HOME=$HOME/Android/Sdk
+ANDROID_PATH=$HOME/Android/Sdk
+if [ "$(uname -s)" = "Darwin" ]; then ANDROID_PATH=$HOME/Library/Android/Sdk; fi
+export ANDROID_HOME=$ANDROID_PATH
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
 # Flutter

@@ -5,7 +5,7 @@
 ## Installation
 
 ```
-cd $HOME && git clone git@github.com:adevjoe/shell-tool.git .st
+cd $HOME && git clone https://github.com/adevjoe/shell-tool.git .st
 echo 'source $HOME/.st/.source' >> $HOME/.zshrc
 ```
 
