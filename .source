@@ -8,6 +8,7 @@ ST_PATH=${HOME}/.st
 export PATH=$PATH:${ST_PATH}:${ST_PATH}/func
 
 # ALIAS
+unalias grv
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vi=vim
