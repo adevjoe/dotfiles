@@ -20,6 +20,7 @@ alias pg="ps aux | head -1; ps aux | grep -v grep | grep"
 alias myip="curl -s http://whatismyip.akamai.com/"
 alias avd=$ANDROID_HOME"/tools/emulator -avd"
 alias rn="react-native"
+alias k="kubectl"
 
 # ENV
 # Golang
