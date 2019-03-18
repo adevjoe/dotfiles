@@ -25,7 +25,7 @@ cd $HOME && git clone https://github.com/adevjoe/shell-tool.git .st
 ```
 
 ```VimL
-echo 'source ~/st/vim/init.vim' > $HOME/.vimrc
+echo 'source ~/.st/vim/init.vim' > $HOME/.vimrc
 ```
 
 请调整你的终端软件，确保对 ALT 键的支持，以及 Backspace 键发送正确扫描码：
