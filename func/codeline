@@ -1,0 +1,13 @@
+#!/bin/bash
+# sum code line from dirs with file suffix
+# usage: codeline [dir-path] [filename-suffix]
+# author: adevjoe
+
+if (($# < 1)) ; then
+    echo "Usage: codeline [dir-path] [filename-suffix]"
+    echo "Example: code ./ py"
+    exit 1
+fi
+
+find $1 -name "*.$2" |xargs cat|grep -v ^$|wc -l
+
