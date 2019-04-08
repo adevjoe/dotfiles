@@ -5,7 +5,7 @@
 
 if (($# < 1)) ; then
     echo "Usage: codeline [dir-path] [filename-suffix]"
-    echo "Example: code ./ py"
+    echo "Example: codeline ./ py"
     exit 1
 fi
 
