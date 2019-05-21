@@ -55,5 +55,10 @@ export PATH=$PATH:$HOME/.nvm/versions/node/v9.10.1/bin:/usr/local/node/bin
 # Autojump
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
 
+# Zsh Theme
+THEME=galaxy
+if [ -f $ST_PATH/zsh-theme/$THEME.zsh-theme ]; then source $ST_PATH/zsh-theme/$THEME.zsh-theme; fi
+
 # OtherEnv
 if [ -f $ST_PATH/.otherEnv ]; then source $ST_PATH/.otherEnv; fi
+
