@@ -36,7 +36,8 @@ main() {
   fi
 
   if [ ! -d "$ZSH" ]; then
-    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    printf "${YELLOW}Oh-my-zsh is not installed!${NORMAL} Please install oh-my-zsh first!\n"
+    printf "Enter the command below this line to install oh-my-zsh\n".
     exit
   fi
 
@@ -87,6 +88,7 @@ main() {
   fi
   echo 'source $HOME/.st/.source' >> $ZSHRC
   echo 'source $HOME/.st/.vimrc' >> $VIMRC
+  source $ZSHRC
 
   printf "${GREEN}"
   echo ''
