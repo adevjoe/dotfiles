@@ -88,7 +88,6 @@ main() {
   fi
   echo 'source $HOME/.st/.source' >> $ZSHRC
   echo 'source $HOME/.st/.vimrc' >> $VIMRC
-  /bin/bash -c 'source ~/.st/.source'
 
   printf "${GREEN}"
   echo ''
@@ -101,6 +100,7 @@ main() {
   echo ''
   echo ''
   echo 'Please look over the ~/.st file to select env, themes, func, and options.'
+  echo 'Enter command `source ~/.st/.source` to use it in the current terminal.'
   echo ''
   echo 'p.s. Follow us at https://github.com/adevjoe'
   echo ''
