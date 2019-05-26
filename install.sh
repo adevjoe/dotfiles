@@ -88,7 +88,7 @@ main() {
   fi
   echo 'source $HOME/.st/.source' >> $ZSHRC
   echo 'source $HOME/.st/.vimrc' >> $VIMRC
-  source $ZSHRC
+  /bin/bash -c 'source $ZSHRC'
 
   printf "${GREEN}"
   echo ''
