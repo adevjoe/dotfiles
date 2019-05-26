@@ -100,6 +100,7 @@ main() {
   echo ''
   echo ''
   echo 'Please look over the ~/.st file to select env, themes, func, and options.'
+  echo ''
   echo 'Enter command `source ~/.st/.source` to use it in the current terminal.'
   echo ''
   echo 'p.s. Follow us at https://github.com/adevjoe'
