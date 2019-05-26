@@ -1,12 +1,10 @@
-# shell-tool(st)
+# Shell Tool
 
-脚本聚合工具，内置一些日常使用的脚本。
+A script aggregation tool for shell.
 
 ## Installation
 
 ```
-git clone https://github.com/adevjoe/shell-tool.git $HOME/.st
-echo 'source $HOME/.st/.source' >> $HOME/.zshrc
-echo 'source $HOME/.st/.vimrc' >> $HOME/.vimrc
+sh -c "$curl -fsSL https://raw.githubusercontent.com/adevjoe/shell-tool/master/install.sh)"
 ```
 
