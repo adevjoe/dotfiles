@@ -38,7 +38,7 @@ main() {
   if [ ! -d "$ZSH" ]; then
     printf "${YELLOW}Oh-my-zsh is not installed!${NORMAL} Please install oh-my-zsh first!\n"
     printf "Enter the command below this line to install oh-my-zsh.\n"
-    echo sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    printf 'sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"\n'
     exit
   fi
 
