@@ -8,7 +8,6 @@ ST_PATH=${HOME}/.st
 export PATH=$PATH:${ST_PATH}:${ST_PATH}/func
 
 # ALIAS
-unalias grv
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vi=vim
@@ -45,12 +44,6 @@ export PATH=$PATH:/usr/local/flutter/bin
 
 # Editor
 export VISUAL="vim"
-
-# NVM
-export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH=$PATH:$HOME/.nvm/versions/node/v9.10.1/bin:/usr/local/node/bin
 
 # Autojump
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
