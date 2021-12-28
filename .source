@@ -37,8 +37,12 @@ export VISUAL="vim"
 THEME=galaxy
 if [ -f $ST_PATH/zsh-theme/$THEME.zsh-theme ]; then source $ST_PATH/zsh-theme/$THEME.zsh-theme; fi
 
-# OtherEnv
-if [ -f $ST_PATH/.otherEnv ]; then source $ST_PATH/.otherEnv; fi
+# Git
+export LESSCHARSET=utf-8
 
 # GPG
 export GPG_TTY=$(tty)
+
+# OtherEnv
+if [ -f $ST_PATH/.otherEnv ]; then source $ST_PATH/.otherEnv; fi
+
