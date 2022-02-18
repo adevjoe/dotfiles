@@ -16,6 +16,7 @@ alias disproxy='unset http_proxy https_proxy'
 alias pg="ps aux | head -1; ps aux | grep -v grep | grep"
 alias myip="curl -s http://whatismyip.akamai.com/"
 alias k="kubectl"
+alias syu=syncUpstream
 
 # ENV
 # Golang

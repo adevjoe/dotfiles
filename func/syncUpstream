@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+# 同步上游代码
+branch=${1-master}
+
+git checkout $branch
+git fetch upstream $branch
+git rebase upstream/$branch
+git push origin $branch
+
+exit 0
