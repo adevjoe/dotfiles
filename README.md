@@ -1,10 +1,10 @@
-# Shell Tool
+# Dotfiles
 
-A script aggregation tool for shell.
+My dotfiles
 
 ## Installation
 
 ```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/adevjoe/shell-tool/master/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/adevjoe/dotfiles/master/install.sh)"
 ```
 

@@ -1,11 +1,11 @@
 #!/bin/bash
-# SHEEL TOOL
+# Dotfiles
 # Easy to tap command
 # Author: adevjoe
-# Usage: source $HOME/.st/.source
+# Usage: source $HOME/.dotfiles/.source
 
-ST_PATH=${HOME}/.st
-export PATH=$PATH:${ST_PATH}:${ST_PATH}/func
+DOTFILES_PATH=${HOME}/.dotfiles
+export PATH=$PATH:${DOTFILES_PATH}:${DOTFILES_PATH}/func
 
 # ALIAS
 alias vi=vim
@@ -24,6 +24,9 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+# K8s
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
 # Flutter
 export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
@@ -36,7 +39,7 @@ export VISUAL="vim"
 
 # Zsh Theme
 THEME=galaxy
-if [ -f $ST_PATH/zsh-theme/$THEME.zsh-theme ]; then source $ST_PATH/zsh-theme/$THEME.zsh-theme; fi
+if [ -f $DOTFILES_PATH/zsh-theme/$THEME.zsh-theme ]; then source $DOTFILES_PATH/zsh-theme/$THEME.zsh-theme; fi
 
 # Git
 export LESSCHARSET=utf-8
@@ -45,5 +48,5 @@ export LESSCHARSET=utf-8
 export GPG_TTY=$(tty)
 
 # OtherEnv
-if [ -f $ST_PATH/.otherEnv ]; then source $ST_PATH/.otherEnv; fi
+if [ -f $DOTFILES_PATH/.otherEnv ]; then source $DOTFILES_PATH/.otherEnv; fi
 

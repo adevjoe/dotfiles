@@ -40,13 +40,13 @@ main() {
     exit
   fi
 
-  if [ ! -n "$ST" ]; then
-    ST=~/.st
+  if [ ! -n "$DOTFILES" ]; then
+    DOTFILES=~/.dotfiles
   fi
 
-  if [ -d "$ST" ]; then
+  if [ -d "$DOTFILES" ]; then
     printf "${YELLOW}You already have Shell Tool installed.${NORMAL}\n"
-    printf "You'll need to remove $ST if you want to re-install.\n"
+    printf "You'll need to remove $DOTFILES if you want to re-install.\n"
     exit
   fi
 
@@ -70,7 +70,7 @@ main() {
       exit 1
     fi
   fi
-  env git clone https://github.com/adevjoe/shell-tool.git "$ST" || {
+  env git clone https://github.com/adevjoe/dotfiles.git "$DOTFILES" || {
     printf "Error: git clone of shell tool repo failed\n"
     exit 1
   }
@@ -85,22 +85,22 @@ main() {
   if [ ! -f "$VIMRC" ]; then
     touch $VIMRC
   fi
-  echo 'source $HOME/.st/.source' >> $ZSHRC
-  echo 'source $HOME/.st/.vimrc' >> $VIMRC
+  echo 'source $HOME/.dotfiles/.source' >> $ZSHRC
+  echo 'source $HOME/.dotfiles/.vimrc' >> $VIMRC
 
   printf "${GREEN}"
   echo ''
-  echo '     _________.__           .__  .__    ___________           .__    '
-  echo '    /   _____/|  |__   ____ |  | |  |   \__    ___/___   ____ |  |   '
-  echo '    \_____  \ |  |  \_/ __ \|  | |  |     |    | /  _ \ /  _ \|  |   '
-  echo '    /        \|   Y  \  ___/|  |_|  |__   |    |(  <_> |  <_> )  |__ '
-  echo '   /_______  /|___|  /\___  >____/____/   |____| \____/ \____/|____/ '
-  echo '           \/      \/     \/                                         ....is now installed!'
+  echo '________          __    _____.__.__                 '
+  echo '\______ \   _____/  |__/ ____\__|  |   ____   ______'
+  echo ' |    |  \ /  _ \   __\   __\|  |  | _/ __ \ /  ___/'
+  echo ' |    `   (  <_> )  |  |  |  |  |  |_\  ___/ \___ \ '
+  echo '/_______  /\____/|__|  |__|  |__|____/\___  >____  >'
+  echo '        \/                                \/     \/ '
   echo ''
   echo ''
-  echo 'Please look over the ~/.st file to select env, themes, func, and options.'
+  echo 'Please look over the ~/.dotfiles file to select env, themes, func, and options.'
   echo ''
-  echo 'Enter command `source ~/.st/.source` to use it in the current terminal.'
+  echo 'Enter command `source ~/.dotfiles/.source` to use it in the current terminal.'
   echo ''
   echo 'p.s. Follow us at https://github.com/adevjoe'
   echo ''
