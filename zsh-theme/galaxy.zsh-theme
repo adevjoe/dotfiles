@@ -5,18 +5,18 @@
 # Galaxy Terminal Theme
 #
 # Author: adevjoe
-# https://github.com/adevjoe/shell-tool/zsh-theme/galaxy.zsh-theme
+# https://github.com/adevjoe/dotfiles/zsh-theme/galaxy.zsh-theme
 #
 # ------------------------------------------------------------------------------
 
-ZSH_THEME_GIT_PROMPT_PREFIX=" %F{10}"
+ZSH_THEME_GIT_PROMPT_PREFIX=" $(get_color 10)"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%f"
-ZSH_THEME_GIT_PROMPT_DIRTY="%f%F{11}"
+ZSH_THEME_GIT_PROMPT_DIRTY="$(get_color 11)"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 get_welcome_symbol() {
 
-	echo -n "%(?..%F{1})"
+	echo -n "%(?..$(get_color 1))"
 	
 	local welcome_symbol='$'
 	[ $EUID -ne 0 ] || welcome_symbol='#'
@@ -24,8 +24,6 @@ get_welcome_symbol() {
 	echo -n $welcome_symbol
 	echo -n "%(?..%f)"
 }
-
-# local get_time="%F{grey}[%*]%f"
 
 get_current_branch() {
 
@@ -39,21 +37,23 @@ get_current_branch() {
 	fi
 }
 
+get_color() {
+	echo -n "\e[38;05;${1}m"
+}
+
 get_prompt() {
 
 	# 256-colors check (will be used later): tput colors
 	
-	echo -n "%F{6}%n%f" # User
-	echo -n "%F{8}@%f" # at
-	echo -n "%F{12}%m%f" # Host
-	echo -n "%F{8}:%f" # in 
+	echo -n "$(get_color 6)%n" # User
+	echo -n "$(get_color 8)@" # at
+	echo -n "$(get_color 12)%m" # Host
+	echo -n "$(get_color 8):" # in 
 	echo -n "%{$reset_color%}%~" # Dir
 	echo -n "$(get_current_branch)" # Git branch
 	echo -n "\n"
 	echo -n "$(get_welcome_symbol)%{$reset_color%} " # $ or #
 }
-
-export GREP_COLOR='1;31'
 
 PROMPT='$(get_prompt)'
 
