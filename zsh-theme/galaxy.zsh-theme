@@ -9,6 +9,10 @@
 #
 # ------------------------------------------------------------------------------
 
+get_color() {
+	echo -n "\e[38;05;${1}m"
+}
+
 ZSH_THEME_GIT_PROMPT_PREFIX=" $(get_color 10)"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%f"
 ZSH_THEME_GIT_PROMPT_DIRTY="$(get_color 11)"
@@ -35,10 +39,6 @@ get_current_branch() {
 		echo -n "‹${branch}›"
 		echo -n $ZSH_THEME_GIT_PROMPT_SUFFIX
 	fi
-}
-
-get_color() {
-	echo -n "\e[38;05;${1}m"
 }
 
 get_prompt() {
