@@ -5,7 +5,7 @@ set -e
 branch=${1-master}
 
 git checkout $branch
-git fetch upstream $branch
+git fetch upstream $branch --tags
 git rebase upstream/$branch
 git push origin $branch
 
