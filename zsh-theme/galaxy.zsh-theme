@@ -20,7 +20,7 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 get_welcome_symbol() {
 
-	echo -n "%(?..$(get_color 1))"
+	echo -n "%(?:%{$(get_color 7)%}:%{$(get_color 1)%})"
 	
 	local welcome_symbol='$'
 	[ $EUID -ne 0 ] || welcome_symbol='#'
@@ -41,10 +41,21 @@ get_current_branch() {
 	fi
 }
 
+get_icon() {
+	if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+        	echo -n " 🐧 "
+	elif [[ "$OSTYPE" == "darwin"* ]]; then
+        	echo -n "  "
+	else
+        	echo -n " 🖥 "
+	fi
+}
+
 get_prompt() {
 
 	# 256-colors check (will be used later): tput colors
 	
+        echo -n "$(get_icon)" # icon
 	echo -n "$(get_color 6)%n" # User
 	echo -n "$(get_color 8)@" # at
 	echo -n "$(get_color 12)%m" # Host
