@@ -24,6 +24,9 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+# gvm
+source ~/.gvm/scripts/gvm
+
 # K8s
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
