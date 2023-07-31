@@ -26,7 +26,7 @@ export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOPATH/bin
 
 # gvm
-source ~/.gvm/scripts/gvm
+if [ -f ~/.gvm/scripts/gvm ]; then source ~/.gvm/scripts/gvm; fi
 
 # K8s
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
@@ -34,6 +34,7 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 # Flutter
 export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+export PATH="$PATH:$HOME/lib/flutter/bin"
 
 # Editor
 export VISUAL="vim"
