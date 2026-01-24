@@ -57,6 +57,9 @@ export LESSCHARSET=utf-8
 # GPG
 export GPG_TTY=$(tty)
 
+# local bin
+export PATH="$HOME/.local/bin:$PATH"
+
 # OtherEnv
 if [ -f $DOTFILES_PATH/.otherEnv ]; then source $DOTFILES_PATH/.otherEnv; fi
 
