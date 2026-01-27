@@ -47,6 +47,10 @@ export VISUAL="vim"
 # Autojump
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
 
+# autosuggestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+[[ -s $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && . $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # Zsh Theme
 THEME=galaxy
 if [ -f $DOTFILES_PATH/zsh-theme/$THEME.zsh-theme ]; then source $DOTFILES_PATH/zsh-theme/$THEME.zsh-theme; fi
@@ -59,6 +63,7 @@ export GPG_TTY=$(tty)
 
 # local bin
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.bun/bin:$PATH"
 
 # OtherEnv
 if [ -f $DOTFILES_PATH/.otherEnv ]; then source $DOTFILES_PATH/.otherEnv; fi
