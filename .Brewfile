@@ -15,6 +15,7 @@ brew "gh"
 brew "speedtest-cli"
 brew "asciinema"
 brew "telnet"
+brew "tmux"
 
 # containers
 brew "colima"
