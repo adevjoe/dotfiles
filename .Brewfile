@@ -2,6 +2,7 @@
 brew "git"
 brew "vim"
 brew "curl"
+brew "wget"
 brew "jq"
 brew "yq"
 brew "cask"
