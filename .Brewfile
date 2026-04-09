@@ -27,7 +27,6 @@ brew "kubectx"
 
 # Development Apps
 cask "iterm2"
-cask "cursor"
 cask "visual-studio-code"
 cask "antigravity"
 
@@ -52,8 +51,6 @@ cask "firefox"
 cask "linearmouse"
 cask "hiddenbar"
 cask "istat-menus"
-cask "obs"
-cask "mark-text"
 cask "bigwig-club/brew/upic"
 brew "ffmpeg"
 cask "obsidian"
@@ -62,7 +59,6 @@ cask "rapidapi"
 cask "telegram"
 cask "snipaste"
 cask "appcleaner"
-cask "eudic"
 cask "discord"
 
 # fonts
