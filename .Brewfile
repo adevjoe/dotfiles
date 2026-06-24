@@ -28,7 +28,6 @@ brew "kubectx"
 # Development Apps
 cask "iterm2"
 cask "visual-studio-code"
-cask "antigravity"
 
 # Development Langs, Compilers, Package Managers and SDKs
 brew "gcc"
@@ -49,7 +48,6 @@ brew "rust"
 cask "google-chrome"
 cask "firefox"
 cask "linearmouse"
-cask "hiddenbar"
 cask "istat-menus"
 cask "bigwig-club/brew/upic"
 brew "ffmpeg"
@@ -58,8 +56,10 @@ cask "netnewswire"
 cask "rapidapi"
 cask "telegram"
 cask "snipaste"
-cask "appcleaner"
+cask "eudic"
 cask "discord"
+brew "mole"
+cask "cc-switch"
 
 # fonts
 cask "font-jetbrains-mono"
