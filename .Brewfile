@@ -26,7 +26,8 @@ brew "krew"
 brew "kubectx"
 
 # Development Apps
-cask "iterm2"
+#cask "iterm2"
+cask "ghostty"
 cask "visual-studio-code"
 
 # Development Langs, Compilers, Package Managers and SDKs
