@@ -1,0 +1,13 @@
+onboarding = false
+link-url = true
+
+[ui]
+show_agent_labels_on_pane_borders = true
+copy_on_select = false
+
+[ui.toast]
+delivery = "herdr"
+
+[theme]
+name = "one-dark"
+auto_switch = false
