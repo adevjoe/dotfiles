@@ -48,8 +48,10 @@ export VISUAL="vim"
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
 
 # autosuggestions
-if command -v brew &>/dev/null; then
-  [[ -s $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && . $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [ -n "$ZSH_VERSION" ]; then
+  _zsh_plugin_prefix="/usr/share/zsh/plugins"
+  command -v brew &>/dev/null && _zsh_plugin_prefix="$(brew --prefix)/share"
+  [[ -s $_zsh_plugin_prefix/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && . $_zsh_plugin_prefix/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
 # Zsh Theme
@@ -68,4 +70,10 @@ export PATH="$HOME/.bun/bin:$PATH"
 
 # OtherEnv
 if [ -f $DOTFILES_PATH/.otherEnv ]; then source $DOTFILES_PATH/.otherEnv; fi
+
+# syntax highlighting (must be sourced last)
+if [ -n "$ZSH_VERSION" ]; then
+  [[ -s $_zsh_plugin_prefix/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && . $_zsh_plugin_prefix/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  unset _zsh_plugin_prefix
+fi
 
